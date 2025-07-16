@@ -1,0 +1,131 @@
+/* DUX手机验证插件后台样式 */
+
+.dpv-admin-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.dpv-admin-main {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.dpv-admin-sidebar {
+    width: 300px;
+}
+
+.dpv-admin-box {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    margin-bottom: 20px;
+}
+
+.dpv-admin-box h3 {
+    margin: 0;
+    padding: 12px 20px;
+    border-bottom: 1px solid #eee;
+    background: #f9f9f9;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dpv-admin-box ul,
+.dpv-admin-box p {
+    margin: 0;
+    padding: 15px 20px;
+}
+
+.dpv-admin-box ul {
+    list-style: none;
+}
+
+.dpv-admin-box ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dpv-admin-box ul li:last-child {
+    border-bottom: none;
+}
+
+.dpv-admin-box .button {
+    width: 100%;
+    text-align: center;
+}
+
+/* 表单样式优化 */
+.form-table th {
+    width: 200px;
+}
+
+.form-table td input[type="text"],
+.form-table td input[type="number"],
+.form-table td textarea {
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-table .description {
+    color: #666;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .dpv-admin-container {
+        flex-direction: column;
+    }
+    
+    .dpv-admin-sidebar {
+        width: 100%;
+    }
+}
+
+/* 统计信息样式 */
+.dpv-admin-box ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dpv-admin-box ul li::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px dotted #ccc;
+    margin: 0 10px;
+}
+
+/* 按钮样式 */
+.dpv-admin-box .button {
+    margin-bottom: 10px;
+}
+
+.dpv-admin-box .button:last-child {
+    margin-bottom: 0;
+}
+
+/* 成功/错误消息样式 */
+.dpv-message {
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+.dpv-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.dpv-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+

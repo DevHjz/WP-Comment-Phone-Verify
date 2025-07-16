@@ -1,0 +1,480 @@
+/* 手机验证插件前端样式 - 美观优化版 */
+
+/* 主容器样式 */
+.dpv-verification-container {
+    background: #ffffff;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.dpv-verification-container:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #d0d7de;
+}
+
+/* 标题样式 */
+.dpv-form-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #24292f;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 1px solid #f6f8fa;
+    padding-bottom: 12px;
+}
+
+.dpv-form-title small {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color: #656d76;
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+/* 输入框组样式 */
+.dpv-input-group {
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.dpv-input-group input[type="tel"],
+.dpv-input-group input[type="text"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #d1d9e0;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #24292f;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.dpv-input-group input:focus {
+    outline: none;
+    border-color: #0969da;
+    box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.1);
+}
+
+.dpv-input-group input.success {
+    border-color: #1a7f37;
+    background-color: #f6ffed;
+}
+
+.dpv-input-group input.error {
+    border-color: #d1242f;
+    background-color: #fff5f5;
+}
+
+.dpv-input-group input::placeholder {
+    color: #8c959f;
+    font-size: 14px;
+}
+
+/* 图片验证码组样式 - 优化居中和自适应 */
+.dpv-image-captcha-group {
+    margin-bottom: 12px;
+    padding: 16px;
+    background: #f6f8fa;
+    border-radius: 6px;
+    border: 1px solid #d1d9e0;
+    text-align: center;
+}
+
+.dpv-captcha-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.dpv-captcha-image-wrapper img {
+    border: 1px solid #d1d9e0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #ffffff;
+    max-width: 100%;
+    height: auto;
+}
+
+.dpv-captcha-image-wrapper img:hover {
+    border-color: #0969da;
+    box-shadow: 0 2px 4px rgba(9, 105, 218, 0.1);
+}
+
+.dpv-refresh-captcha {
+    background: #f6f8fa;
+    border: 1px solid #d1d9e0;
+    border-radius: 4px;
+    padding: 8px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #656d76;
+    transition: all 0.2s ease;
+    min-width: 36px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.dpv-refresh-captcha:hover {
+    background: #eaeef2;
+    border-color: #afb8c1;
+    color: #24292f;
+}
+
+/* 人机验证码输入框 - 居中且自适应 */
+.dpv-captcha-input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 200px;
+}
+
+.dpv-image-captcha-group input {
+    width: 100%;
+    max-width: 160px;
+    padding: 12px 16px !important;
+    margin: 0 auto !important;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 16px;
+    border: 2px solid #d1d9e0;
+    border-radius: 6px;
+    background: #ffffff;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.dpv-image-captcha-group input:focus {
+    outline: none;
+    border-color: #0969da;
+    box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.1);
+}
+
+.dpv-image-captcha-group input.error {
+    border-color: #d1242f;
+    background-color: #fff5f5;
+}
+
+.dpv-image-captcha-group input.success {
+    border-color: #1a7f37;
+    background-color: #f6ffed;
+}
+
+/* 按钮样式 - 优化配色 */
+.dpv-button {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dpv-button:disabled {
+    cursor: not-allowed;
+}
+
+.dpv-button.disabled {
+    background: #8c959f;
+    color: #ffffff;
+    opacity: 0.6;
+}
+
+/* 优化发送验证码按钮配色 - 使用更统一的蓝色系 */
+.dpv-button.ready {
+    background: linear-gradient(135deg, #0969da 0%, #0550ae 100%);
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(9, 105, 218, 0.2);
+    border: 1px solid #0550ae;
+}
+
+.dpv-button.ready:hover {
+    background: linear-gradient(135deg, #0550ae 0%, #033d8b 100%);
+    box-shadow: 0 4px 8px rgba(9, 105, 218, 0.3);
+    transform: translateY(-1px);
+}
+
+.dpv-button.success {
+    background: linear-gradient(135deg, #1a7f37 0%, #116329 100%);
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(26, 127, 55, 0.2);
+    border: 1px solid #116329;
+}
+
+.dpv-button.error {
+    background: linear-gradient(135deg, #d1242f 0%, #a40e26 100%);
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(209, 36, 47, 0.2);
+    border: 1px solid #a40e26;
+}
+
+.dpv-button.countdown {
+    background: #656d76;
+    color: #ffffff;
+    cursor: not-allowed;
+}
+
+/* 确认关联按钮特殊配色 - 使用统一的蓝色系 */
+#dpv-verify-phone-btn.dpv-button.ready,
+#dpv-verify-phone-btn.dpv-button:not(.disabled):not(.loading):not(.countdown):not(.error):not(.success) {
+    background: linear-gradient(135deg, #0969da 0%, #0550ae 100%);
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(9, 105, 218, 0.2);
+    border: 1px solid #0550ae;
+}
+
+#dpv-verify-phone-btn.dpv-button.ready:hover,
+#dpv-verify-phone-btn.dpv-button:not(.disabled):not(.loading):not(.countdown):not(.error):not(.success):hover {
+    background: linear-gradient(135deg, #0550ae 0%, #033d8b 100%);
+    box-shadow: 0 4px 8px rgba(9, 105, 218, 0.3);
+    transform: translateY(-1px);
+}
+
+/* 验证码输入区域 */
+.dpv-verification-code-wrapper {
+    background: #f8f9fa;
+    border-radius: 6px;
+    padding: 16px;
+    margin-top: 16px;
+    border: 1px solid #e1e5e9;
+}
+
+.dpv-verification-actions {
+    margin-top: 12px;
+}
+
+/* 错误信息样式 */
+.dpv-error-message {
+    color: #d1242f;
+    font-size: 12px;
+    margin-top: 6px;
+    padding: 6px 12px;
+    background: #fff5f5;
+    border: 1px solid #fecaca;
+    border-radius: 4px;
+    line-height: 1.4;
+}
+
+/* 成功验证样式 */
+.dpv-verified-notice {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border: 1px solid #7dd3fc;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.dpv-success-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #0c4a6e;
+    font-weight: 500;
+}
+
+.dpv-success-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: #22c55e;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .dpv-verification-container {
+        margin: 10px 0;
+        padding: 16px;
+        border-radius: 6px;
+    }
+    
+    .dpv-form-title {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+    
+    .dpv-input-group {
+        margin-bottom: 14px;
+    }
+    
+    .dpv-input-group input {
+        padding: 10px 14px;
+        font-size: 16px; /* 防止iOS缩放 */
+    }
+    
+    .dpv-image-captcha-group {
+        padding: 14px;
+    }
+    
+    .dpv-captcha-image-wrapper {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        margin-bottom: 14px;
+    }
+    
+    .dpv-captcha-image-wrapper img {
+        max-width: 120px;
+        height: auto;
+    }
+    
+    .dpv-refresh-captcha {
+        align-self: center;
+        margin-top: 8px;
+    }
+    
+    .dpv-image-captcha-group input {
+        max-width: 140px;
+        margin: 0 auto;
+        font-size: 16px; /* 防止iOS缩放 */
+        padding: 10px 14px !important;
+    }
+    
+    .dpv-button {
+        padding: 14px 20px;
+        font-size: 16px; /* 防止iOS缩放 */
+    }
+    
+    .dpv-verification-code-wrapper {
+        padding: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dpv-verification-container {
+        padding: 12px;
+        margin: 8px 0;
+    }
+    
+    .dpv-form-title {
+        font-size: 14px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .dpv-form-title small {
+        font-size: 11px;
+        margin-top: 3px;
+    }
+    
+    .dpv-input-group input {
+        padding: 12px;
+    }
+    
+    .dpv-image-captcha-group {
+        padding: 8px;
+    }
+    
+    .dpv-button {
+        padding: 12px 16px;
+        margin-bottom: 10px;
+    }
+    
+    .dpv-success-message {
+        font-size: 13px;
+        gap: 8px;
+    }
+    
+    .dpv-success-icon {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+}
+
+/* 加载动画 */
+@keyframes dpv-pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.dpv-button.loading {
+    animation: dpv-pulse 1.5s ease-in-out infinite;
+}
+
+/* 聚焦环样式 */
+.dpv-input-group input:focus,
+.dpv-button:focus,
+.dpv-refresh-captcha:focus,
+.dpv-captcha-image-wrapper img:focus {
+    outline: 2px solid #0969da;
+    outline-offset: 2px;
+}
+
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+    .dpv-verification-container {
+        border-width: 2px;
+    }
+    
+    .dpv-input-group input {
+        border-width: 2px;
+    }
+    
+    .dpv-button {
+        border: 2px solid transparent;
+    }
+    
+    .dpv-button.ready {
+        border-color: #0969da;
+    }
+    
+    .dpv-button.success {
+        border-color: #1a7f37;
+    }
+    
+    .dpv-button.error {
+        border-color: #d1242f;
+    }
+}
+
+/* 减少动画模式支持 */
+@media (prefers-reduced-motion: reduce) {
+    .dpv-verification-container,
+    .dpv-input-group input,
+    .dpv-button,
+    .dpv-refresh-captcha,
+    .dpv-captcha-image-wrapper img {
+        transition: none;
+    }
+    
+    .dpv-button.ready:hover {
+        transform: none;
+    }
+    
+    @keyframes dpv-pulse {
+        0%, 100% { opacity: 1; }
+    }
+}
+

@@ -1,0 +1,59 @@
+# DUX手机验证插件中文语言包
+# Copyright (C) 2024
+# This file is distributed under the same license as the DUX Phone Verification Plugin package.
+msgid ""
+msgstr ""
+"Project-Id-Version: DUX Phone Verification Plugin 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "DUX Phone Verification Settings"
+msgstr "DUX手机验证设置"
+
+msgid "Phone number is required"
+msgstr "请输入手机号"
+
+msgid "Invalid phone number format"
+msgstr "手机号格式不正确"
+
+msgid "This number prefix is not allowed"
+msgstr "该号段不允许绑定"
+
+msgid "Captcha is required"
+msgstr "请输入验证码"
+
+msgid "Incorrect captcha"
+msgstr "验证码错误"
+
+msgid "Verification code is required"
+msgstr "请输入短信验证码"
+
+msgid "Invalid verification code"
+msgstr "短信验证码错误"
+
+msgid "Code sent successfully"
+msgstr "验证码发送成功"
+
+msgid "Too frequent, please try again later"
+msgstr "操作频繁，请稍后再试"
+
+msgid "Send failed, please retry"
+msgstr "发送失败，请重试"
+
+msgid "Verification successful"
+msgstr "验证成功"
+
+msgid "Verification failed"
+msgstr "验证失败"
+
+msgid "Please complete phone verification first"
+msgstr "请先完成手机验证"
+
