@@ -72,21 +72,27 @@ WordPress 评论区手机验证插件，用于在用户发布评论时强制进�
 ## 开发相关
 
 ### 目录结构
-'''
+
+```
 phone-verification-plugin/
-├── assets/ # 静态资源
-│ ├── css/ # 样式文件
-│ └── js/ # 脚本文件（admin.js/frontend.js）
-├── includes/ # 核心类
-│ ├── class-admin.php # 后台管理功能
-│ ├── class-ajax.php # AJAX 处理
-│ ├── class-captcha.php # 图片验证码生成
-│ └── class-database.php # 数据库操作
-├── languages/ # 多语言文件
-├── phone-verification-plugin.php # 插件主文件
-├── uninstall.php # 卸载清理脚本
-└── README.md # 说明文档
-'''
+├── assets/               # 静态资源
+│   ├── css/              # 样式文件
+│   │   ├── frontend.css  # 前端样式（用户端验证表单）
+│   │   └── admin.css     # 后台样式（设置页面）
+│   └── js/               # 脚本文件
+│       ├── frontend.js   # 前端交互（验证流程逻辑）
+│       └── admin.js      # 后台交互（设置页操作）
+├── includes/             # 核心功能类
+│   ├── class-admin.php   # 后台管理功能（菜单、设置页）
+│   ├── class-ajax.php    # AJAX 请求处理（前后端交互）
+│   ├── class-captcha.php # 图片验证码生成与验证
+│   ├── class-database.php # 数据库操作（表管理、数据读写）
+│   └── class-frontend.php # 前端功能（资源加载、评论验证）
+├── languages/            # 多语言文件（预留）
+├── phone-verification-plugin.php # 插件主文件（入口、初始化）
+├── uninstall.php         # 卸载脚本（清理数据库表和选项）
+└── README.md             # 项目说明文档
+```
 
 ### 依赖环境
 
