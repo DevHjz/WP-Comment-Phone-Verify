@@ -72,6 +72,7 @@ WordPress 评论区手机验证插件，用于在用户发布评论时强制进�
 ## 开发相关
 
 ### 目录结构
+'''
 phone-verification-plugin/
 ├── assets/ # 静态资源
 │ ├── css/ # 样式文件
@@ -85,7 +86,7 @@ phone-verification-plugin/
 ├── phone-verification-plugin.php # 插件主文件
 ├── uninstall.php # 卸载清理脚本
 └── README.md # 说明文档
-
+'''
 
 ### 依赖环境
 
