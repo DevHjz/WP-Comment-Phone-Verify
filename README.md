@@ -102,7 +102,7 @@ phone-verification-plugin/
 
 ## 许可证
 
-[GPLv2 或更高版本](https://www.gnu.org/licenses/gpl-2.0.html)
+[Apache License 2.0](https://github.com/DevHjz/WP-Comment-Phone-Verify/blob/main/LICENSE)
 
 ## 作者
 
