@@ -167,7 +167,7 @@ class DPV_Ajax {
         if (empty($template_id)) {
             return array(
                 'success' => false,
-                'message' => '短信模板ID未配置，请在后台设置中配置！'
+                'message' => '短信模板未配置，请联系管理员在后台设置中配置！'
             );
         }
         

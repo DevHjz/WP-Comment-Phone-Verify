@@ -129,4 +129,3 @@ class DPV_Captcha {
         return $code;
     }
 }
-

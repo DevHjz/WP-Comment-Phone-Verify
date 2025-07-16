@@ -1,4 +1,4 @@
-/* 手机验证插件前端样式 - 美观优化版 */
+/* 插件前端样式 */
 
 /* 主容器样式 */
 .dpv-verification-container {
@@ -88,6 +88,7 @@
     text-align: center;
 }
 
+/* 关键修改：确保验证码图片和刷新按钮不换行 */
 .dpv-captcha-image-wrapper {
     display: flex;
     align-items: center;
@@ -95,7 +96,8 @@
     gap: 12px;
     margin-bottom: 16px;
     position: relative;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* 禁止换行 */
+    min-width: 0; /* 允许内容适当收缩 */
 }
 
 .dpv-captcha-image-wrapper img {
@@ -106,6 +108,8 @@
     background: #ffffff;
     max-width: 100%;
     height: auto;
+    width: 120px !important; /* 固定宽度 */
+    flex-shrink: 0; /* 防止被压缩 */
 }
 
 .dpv-captcha-image-wrapper img:hover {
@@ -124,7 +128,7 @@
     transition: all 0.2s ease;
     min-width: 36px;
     text-align: center;
-    flex-shrink: 0;
+    flex-shrink: 0; /* 防止被压缩 */
 }
 
 .dpv-refresh-captcha:hover {
@@ -336,10 +340,10 @@
         padding: 14px;
     }
     
+    /* 响应式下保持不换行 */
     .dpv-captcha-image-wrapper {
-        flex-direction: column;
+        flex-wrap: nowrap;
         gap: 10px;
-        text-align: center;
         margin-bottom: 14px;
     }
     
@@ -349,8 +353,7 @@
     }
     
     .dpv-refresh-captcha {
-        align-self: center;
-        margin-top: 8px;
+        margin-top: 0; /* 移除移动端额外边距 */
     }
     
     .dpv-image-captcha-group input {
@@ -474,7 +477,7 @@
     }
     
     @keyframes dpv-pulse {
-        0%, 100% { opacity: 1; }
+        0% { opacity: 1; }
+        100% { opacity: 1; }
     }
 }
-

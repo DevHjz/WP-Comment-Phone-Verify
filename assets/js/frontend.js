@@ -34,7 +34,7 @@ jQuery(document).ready(function($) {
                 '<div class="dpv-verified-notice">' +
                 '<div class="dpv-success-message">' +
                 '<span class="dpv-success-icon">✓</span>' +
-                '<span>您已经完成实名验证，请直接评论。</span>' +
+                '<span>您已经完成验证，请评论。</span>' +
                 '</div>' +
                 '</div>' +
                 '</div>';
@@ -46,11 +46,11 @@ jQuery(document).ready(function($) {
         var formHtml = '<div class="dpv-verification-container" id="dpv-verification-container">' +
             '<div class="dpv-form-title">' +
             '手机号验证' +
-            '<small>为了防止恶意评论，请完成手机号验证</small>' +
+            '<small>应网安监管要求，评论前需验证手机号，仅对本次会话生效。</small>' +
             '</div>' +
             
             '<div class="dpv-input-group">' +
-            '<input type="tel" id="dpv-phone-number" placeholder="请输入11位手机号" maxlength="11" autocomplete="tel">' +
+            '<input type="tel" id="dpv-phone-number" placeholder="请输入11位手机号（暂不支持境外号码）" maxlength="11" autocomplete="tel">' +
             '<div class="dpv-error-message" id="dpv-phone-error" style="display: none;"></div>' +
             '</div>' +
             

@@ -3,7 +3,7 @@
  * Plugin Name: 评论手机验证插件
  * Plugin URI: https://github.com/DevHjz/WP-Comment-Phone-Verify
  * Description: 为个人网站开发者的评论区添加SPUG推送的短信手机验证功能，旨在免去用户登录注册的情况下发布评论时符合网安的要求，兼容DUX主题。
- * Version: 1.5.0
+ * Version: 1.6.0
  * Author: DevHjz
  * Author URI: https://www.DevHjz.com
  * License: Apache License 2.0
@@ -22,7 +22,7 @@ if (!defined('ABSPATH')) {
 // 定义插件常量
 define('DPV_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('DPV_PLUGIN_PATH', plugin_dir_path(__FILE__));
-define('DPV_VERSION', '1.5.0');
+define('DPV_VERSION', '1.6.0');
 
 // 主插件类
 class DuxPhoneVerification {
@@ -79,7 +79,7 @@ class DuxPhoneVerification {
         $this->set_default_options();
         
         // 设置数据库版本号
-        update_option('dpv_db_version', '1.5.0');
+        update_option('dpv_db_version', '1.6.0');
     }
     
     public function deactivate() {
@@ -92,9 +92,9 @@ class DuxPhoneVerification {
         $current_version = get_option('dpv_db_version', '0');
         
         // 如果版本不匹配或表不存在，重新创建表
-        if (version_compare($current_version, '1.5.0', '<') || !$this->tables_exist()) {
+        if (version_compare($current_version, '1.6.0', '<') || !$this->tables_exist()) {
             $this->create_tables();
-            update_option('dpv_db_version', '1.5.0');
+            update_option('dpv_db_version', '1.6.0');
         }
     }
     
